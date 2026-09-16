@@ -1,0 +1,45 @@
+# Day 1 – ML Fundamentals & Scikit-learn
+
+## Topics Covered
+
+* Machine Learning basics
+* Features (X) and Target (y)
+* Training and Testing data
+* Train/Test Split
+* Random Forest Classifier
+* Model Training using `fit()`
+* Prediction using `predict()`
+* Model Evaluation using Accuracy
+* Basic Scikit-learn workflow
+
+## Hands-on
+
+Built a simple customer churn prediction model using:
+
+* Python
+* Pandas
+* Scikit-learn
+* Random Forest
+
+## ML Workflow
+
+Dataset → Features & Target → Train/Test Split → Model Training → Prediction → Evaluation
+
+## Key Concepts
+
+* `X` → Input features
+* `y` → Target/label
+* `fit()` → Trains the model
+* `predict()` → Generates predictions
+* `accuracy_score()` → Evaluates predictions
+
+## Environment
+
+* Python
+* Scikit-learn 1.6.1
+* Pandas
+* NumPy
+
+## Status
+
+Day 1 completed.
