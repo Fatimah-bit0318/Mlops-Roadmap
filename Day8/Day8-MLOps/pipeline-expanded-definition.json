@@ -1,0 +1,10 @@
+{
+  "note": "PLACEHOLDER - regenerate this file by running pipeline-expanded.py in the configured SageMaker environment.",
+  "pipeline_name": "Day8-HousePrice-Full-Pipeline",
+  "expected_steps": [
+    "TrainHousePriceModel",
+    "EvaluateHousePriceModel",
+    "HousePriceRMSEQualityGate"
+  ],
+  "aws_execution_started": false
+}

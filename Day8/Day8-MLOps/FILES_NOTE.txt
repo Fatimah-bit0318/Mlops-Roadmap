@@ -1,0 +1,3 @@
+This folder contains starter project files.
+CSV datasets are sample placeholders, not your original data.
+pipeline-expanded-definition.json is a placeholder; regenerate it in SageMaker by running pipeline-expanded.py.
