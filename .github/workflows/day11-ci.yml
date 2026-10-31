@@ -1,0 +1,41 @@
+name: Day 11 MLOps CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Day11/**'
+      - '.github/workflows/day11-ci.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'Day11/**'
+      - '.github/workflows/day11-ci.yml'
+
+jobs:
+  validate-and-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Day11
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Check Python syntax
+        run: python -m compileall -q .
+      - name: Run unit tests
+        run: python -m pytest -q
+      - name: Train sample model
+        run: python train.py
+      - name: Verify model artifact
+        run: python -c "from pathlib import Path; assert Path('model.joblib').is_file()"
+      - name: Build Docker image
+        run: docker build -t day11-mlops-demo:ci .
